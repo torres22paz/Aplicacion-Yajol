@@ -1,0 +1,7 @@
+# Entorno virtual (se regenera con requirements.txt)
+.venv/
+# Caché de Python
+__pycache__/
+*.pyc
+# Registros locales
+*.log
