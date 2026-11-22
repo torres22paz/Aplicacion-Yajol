@@ -1,0 +1,40 @@
+﻿CORRECTOR YAJOL 2.1
+===================
+
+Corrector ortográfico flotante para Windows. Revisa lo que escribes en
+Word, en el navegador y en cualquier otro programa.
+
+
+INSTALAR (una sola vez)
+
+  1.  Extrae el ZIP: clic derecho sobre corrector_yajol.zip -> Extraer todo.
+      Guarda la carpeta en Documentos o en el Escritorio.
+  2.  Entra en la carpeta extraída y abre  Instalar.vbs
+  3.  Espera de 2 a 5 minutos. Aparecerá el icono del pájaro abajo a la
+      derecha y una ventana que explica cómo se usa.
+
+  El instalador quita solo el arranque de la versión anterior, que era el
+  que mostraba un error cada vez que se encendía el equipo.
+
+
+USAR
+
+  -  Pulsa el icono del pájaro (o Ctrl + Alt + C) para revisar lo escrito.
+  -  Pulsa el signo ? del icono para ver la ayuda.
+  -  Clic derecho sobre el icono para ver las opciones.
+
+
+GUÍA COMPLETA
+
+  Abre  Guia.html  (doble clic). Tiene todas las instrucciones con ejemplos.
+
+
+ARCHIVOS DE ESTA CARPETA
+
+  Instalar.vbs       Instala el corrector y repara el arranque
+  Yajol.vbs          Abre el corrector
+  Desinstalar.vbs    Lo quita del equipo
+  Guia.html          Instrucciones completas
+  yajol\             El programa
+  tests\             Pruebas unitarias
+  herramientas\      Genera los .vbs y la guía a partir de sus textos

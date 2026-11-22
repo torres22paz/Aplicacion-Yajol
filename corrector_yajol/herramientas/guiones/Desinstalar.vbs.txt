@@ -1,0 +1,40 @@
+' ============================================================
+'  Corrector YAJOL - quitar del equipo
+' ============================================================
+Option Explicit
+
+Dim sh, fso, carpeta, q, venv, rutaInicio, archivo, quitados
+
+Set sh  = CreateObject("WScript.Shell")
+Set fso = CreateObject("Scripting.FileSystemObject")
+q = Chr(34)
+carpeta = fso.GetParentFolderName(WScript.ScriptFullName)
+venv = carpeta & "\.venv"
+
+'@COMUN@
+
+If Not Pregunta("Voy a quitar el corrector de este equipo:" & vbCrLf & vbCrLf & _
+                "   •  Dejará de abrirse al encender el equipo." & vbCrLf & _
+                "   •  Se borrarán los componentes instalados." & vbCrLf & vbCrLf & _
+                "Tus palabras aprendidas no se borran." & vbCrLf & vbCrLf & _
+                "¿Continúo?") Then WScript.Quit 0
+
+CierraCorrectorAbierto
+On Error Resume Next
+WScript.Sleep 800          ' un momento para que Windows suelte los archivos
+On Error GoTo 0
+
+' Arranques de versiones anteriores y el de esta versión
+quitados = LimpiaCarpetaInicio() + LimpiaRegistro()
+rutaInicio = CarpetaInicio()
+On Error Resume Next
+For Each archivo In Array("Corrector YAJOL.lnk", "Corrector YAJOL.vbs")
+    If fso.FileExists(rutaInicio & "\" & archivo) Then
+        fso.DeleteFile rutaInicio & "\" & archivo, True
+    End If
+Next
+If fso.FolderExists(venv) Then fso.DeleteFolder venv, True
+On Error GoTo 0
+
+Aviso "Listo. El corrector ya no se abrirá al encender el equipo." & vbCrLf & vbCrLf & _
+      "Si no lo vas a usar más, puedes borrar esta carpeta.", 64

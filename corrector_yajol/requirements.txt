@@ -1,0 +1,7 @@
+# Componentes del Corrector YAJOL.
+# PySide6-Essentials pesa la tercera parte que PySide6 completo
+# y trae todo lo que usan las ventanas de esta aplicacion.
+PySide6-Essentials>=6.6,<7
+spylls>=0.1.7
+pynput>=1.7
+pyperclip>=1.9
