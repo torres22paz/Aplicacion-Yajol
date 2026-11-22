@@ -1,0 +1,7 @@
+# OPCIONAL: gramatica avanzada con LanguageTool.
+# Necesita Java 17 o superior instalado y descarga unos 250 MB la primera vez.
+# El corrector funciona perfectamente sin esto: trae sus propias reglas.
+#
+# Para instalarlo, abre una terminal en esta carpeta y escribe:
+#   .venv\Scripts\python -m pip install -r requirements-gramatica.txt
+language-tool-python>=2.8
